@@ -1,0 +1,19 @@
+.navbar {
+    position: absolute;
+    top: 3rem;
+    right: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-link {
+    font-size: 2rem;
+    display: inline-block;
+    margin: 0 3rem;
+    color: $color-black;
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: scale(1.5);
+    }
+}
