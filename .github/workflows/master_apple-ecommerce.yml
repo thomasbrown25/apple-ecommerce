@@ -26,9 +26,6 @@ jobs:
                   npm install --legacy-peer-deps
                   npm run build --if-present
 
-            - name: Zip artifact for deployment
-              run: Compress-Archive -Path folder/* -Destination release.zip
-
             - name: Upload artifact for deployment job
               uses: actions/upload-artifact@v2
               with:
@@ -50,10 +47,7 @@ jobs:
               with:
                   name: node-app
 
-            - name: unzip artifact for deployment
-              run: unzip release.zip
-
-            - name: Login to Azure
+            - name: Login to Azure♠
               uses: azure/login@v1
               with:
                   client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F202CADFA1F24FE88EB6DABE518237E7 }}
